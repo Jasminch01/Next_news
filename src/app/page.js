@@ -1,6 +1,20 @@
-import Image from "next/image";
+import LatestNews from "@/components/ui/LatestNews/LatestNews";
+import Sidebar from "@/components/ui/Sidebar/Sidebar";
+import { Grid } from "@mui/material";
 
-export default function Home() {
-  return <div className="h-screen">
-  </div>;
-}
+const HomePage = () => {
+  return (
+    <>
+      <Grid container spacing={2} className="max-w-7xl mx-auto">
+        <Grid item xs={8}>
+          <LatestNews/>
+        </Grid>
+        <Grid item xs={4}>
+          <Sidebar/>
+        </Grid>
+      </Grid>
+    </>
+  );
+};
+
+export default HomePage;
